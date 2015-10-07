@@ -22,6 +22,6 @@ https://pypi.python.org/packages/2.7/M/MySQL-python/MySQL-python-1.2.4.win32-py2
 
 
 Una ves copiada la carpeta del repo e instalado todo, iniciamos XAMPP, y en la terminal ponemos:
-cd "carpeta donde tenemos el proyecto"
-python manage.py syncdb
+- cd "carpeta donde tenemos el proyecto"
+- python manage.py syncdb
 
