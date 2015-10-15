@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from commerce.models import *
+from arkapp.models import *
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.contrib.auth.models import User
@@ -9,8 +9,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.sessions.models import Session
-
-from forms import SignUpForm
+#from forms import SignUpForm
 
 def inicio(request):
 	return render_to_response('ingresar.html', context_instance=RequestContext(request))

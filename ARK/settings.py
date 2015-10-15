@@ -44,7 +44,9 @@ ROOT_URLCONF = 'ARK.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ 
+             os.path.join(BASE_DIR,'views')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -56,11 +58,6 @@ TEMPLATES = [
         },
     },
 ]
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,'views'),#C:\proyectos\grupo\
-    #'C:\proyectos\grupo\Plantilla'#NOTA PARA FUTUROS PROYECTOS
-    )
 
 WSGI_APPLICATION = 'ARK.wsgi.application'
 
@@ -97,6 +94,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
