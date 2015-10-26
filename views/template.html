@@ -31,36 +31,33 @@
 
   			<div class="collapse navbar-collapse" id="nav-bar-collapse">
   				<ul class="nav navbar-nav nav-left">
-  					<li><a href="#">Colaboraciones</a></li>
-  					<li><a href="#">Gestión</a></li>
-  					<li><a href="#">Usuarios</a></li>
+  					{% include 'sections/options-bar.html' %}
   				</ul>
   				<ul  class="nav navbar-nav navbar-right">
   					<li>
-  						<div class="row">
-  							<div class="col-md-12">
-  								{% include 'sections/login-bar.html' %}
-  							</div>
-  						</div>
-  						<div class="row">
-  							<div class="col-md-12">
-  								{% include 'sections/navbar-form.html' %}
-  							</div>
-  						</div>
+  						{% include 'sections/login-bar.html' %}
   					</li>
   				</ul>
   			</div>
   		</div>
   	</nav>
-  	<div class="container">
+  	<div class="container" id="web-content">
   		<div class="row" id="content">
   			{% block content %}
   			{% endblock %}
   		</div>
   	</div>
-  	<div class="container">
-  		<div class="row" id="footer">
-
+  	<div class="row" id="footer">
+  		<div class="container">
+  			<div class="col-md-2">
+  				Copyright ARC 2015
+  			</div>
+  			<div class="col-md-1">
+  				<a href="/faq">FAQ</a>
+  			</div>
+  			<div class="col-md-2">
+  				<a href="terminos-y-politicas">Terminos y politicas</a>
+  			</div>
   		</div>
   	</div>
   	<script src="/static/js/jquery.js"></script>

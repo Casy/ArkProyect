@@ -1,0 +1,208 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div class ="col-md-12 header-title">
+	<h1>Modificar datos</h1>
+</div>
+<form action="/modificar-datos-usuario/" method="post">
+
+	<div class="col-md-3 pt-25">
+		<img src="/static/img/profile.png" class="img-responsive center-block"/>
+		<p class="p-nm mt-30"><b>Cambiar foto</b></p>
+		<input name="imagen-perfil" type="file" class="form-control mb-30">
+	</div>
+	<div class="col-md-9">
+		<div class="row">
+			<div class ="col-md-12 header-title">
+				<h2>Datos de la cuenta</h2>
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="contrasenia-actual">Contraseña actual</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="password" name="contrasenia-actual" id="contrasenia-actual" value="Lanus">
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="contrasenia-nueva">Contraseña nueva</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="password" name="contrasenia-nueva" id="contrasenia-nueva" value="">
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="r-contrasenia-nueva">Repite contraseña nueva</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="password" name="r-contrasenia-nueva" id="r-contrasenia-nueva" value="">
+			</div>
+		</div>
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="correo-electronico">Correo electronico actual</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="text" name="correo-electronico" id="correo-electronico" value="nombrecuenta@arc.edu.ar">
+			</div>
+		</div>
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="nuevo-correo-electronico">Correo electronico nuevo</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="text" name="nuevo-correo-electronico" id="nuevo-correo-electronico" value="nombrecuenta@arc.edu.ar">
+			</div>
+		</div>
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="r-nuevo-correo-electronico">Repite correo electronico nuevo</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="text" name="r-nuevo-correo-electronico" id="r-nuevo-correo-electronico" value="nombrecuenta@arc.edu.ar">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class ="col-md-12 header-title">
+				<h2>Datos personales</h2>
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="nombre">Nombre y apellido</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="text" name="nombre" id="nombre" value="Juan Gonzalez">
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" name="nombre-pp">
+					<option value="publico" selected>Publico</option>
+					<option value="privado">Privado</option>
+				</select>
+			</div>
+		</div>	
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="edad">Edad</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="text" name="edad" id="edad" value="40">
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" name="edad-pp">
+					<option value="publico" selected>Publico</option>
+					<option value="privado">Privado</option>
+				</select>
+			</div>
+		</div>
+
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="cumple-anios">Fecha de nacimiento</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="text" name="cumple-anios" id="cumple-anios" value="01041980">
+				<p class="help-block">En formato DDMMAAAA</p>
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" name="cumple-anios-pp">
+					<option value="publico" selected>Publico</option>
+					<option value="privado">Privado</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="sexo">Sexo</label>
+			</div>
+			<div class="col-md-7">
+				<select class="form-control" name="sexo" id="sexo">
+					<option value="m" selected>Masculino</option>
+					<option value="f">Femenino</option>
+				</select>
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" name="sexo-pp">
+					<option value="publico" selected>Publico</option>
+					<option value="privado">Privado</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="pais">Pais</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="text" name="pais" id="pais" value="Argentina">
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" name="pais-pp">
+					<option value="publico" selected>Publico</option>
+					<option value="privado">Privado</option>
+				</select>
+			</div>
+		</div>
+
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="desde">Desde</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="text" name="desde" id="desde" value="Lanus, Buenos Aires">
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" name="desde-pp">
+					<option value="publico" selected>Publico</option>
+					<option value="privado">Privado</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="profesion">Profesión</label>
+			</div>
+			<div class="col-md-7">
+				<input class="form-control" type="text" name="profesion" id="profesion" value="Ing. en Sistemas">
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" name="profesion-pp">
+					<option value="publico" selected>Publico</option>
+					<option value="privado">Privado</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="acerca-de-mi">Acerca de mi</label>
+			</div>
+			<div class="col-md-7">
+				<textarea class="form-control" name="acerca-de-mi" id="acerca-de-mi">Texto descriptivo</textarea>
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" name="acerca-de-mi-pp">
+					<option value="publico" selected>Publico</option>
+					<option value="privado">Privado</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-9 col-md-offset-3">
+		<button class="btn btn-primary btn-large" type="submit">Enviar</button>
+	</div>
+</form>
+{% endblock %}
+

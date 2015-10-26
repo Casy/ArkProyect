@@ -1,0 +1,94 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div class="col-md-12 header-title">
+	<h1>Busqueda avanzada</h1>
+</div>
+<form action="/resultados-busqueda/" method="post">
+	<div class="col-md-12">
+		<div class="row mb-10">
+			<div class="col-md-3">
+				<label for="tipo">Tipo:</label><br>
+				<select class="form-control" name="tipo" id="tipo">
+					<option value="colaboracion">Colaboracion</option>
+					<option value="referencia">Referencia</option>
+				</select>
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-6">
+				<label for="titulo">Titulo</label><br>
+				<input class="form-control" type="text" name="titulo" id="titulo">
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-6">
+				<label for="nombre-publicacion">Nombre de publicación</label><br>
+				<input class="form-control" type="text" name="nombre-publicacion" id="nombre-publicacion">
+			</div>
+			<div class="col-md-6">
+				<label for="referencia-publicacion">Referencia de publicación:</label><br>
+				<input class="form-control" type="text" name="referencia-publicacion" id="referencia-publicacion">
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-6">
+				<label for="categoria">Palabras clave</label><br>
+				<select class="form-control" name="categoria">
+					<option value="informatica" selected>informatica</option>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<label for="sub-categoria">Subcategoía</label><br>
+				<select class="form-control" name="sub-categoria">
+					<option value="informatica" selected>Gestión</option>
+				</select>
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-6">
+				<label for="palabras-clave">Palabras clave</label><br>
+				<input class="form-control" type="text" name="palabras-clave" id="palabras-clave">
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-12">
+				<p>Fecha de publicación</p>
+			</div>
+			<div class="col-md-3">
+				<label for="fecha-publicacion-desde">Desde</label>
+				<input class="form-control" type="text" name="fecha-publicacion-desde" id="fecha-publicacion-desde" value="01041980">
+				<p class="help-block">En formato DDMMAAAA</p>
+			</div>
+			<div class="col-md-3">
+				<label for="fecha-publicacion-hasta">Hasta</label>
+				<input class="form-control" type="text" name="fecha-publicacion-hasta" id="fecha-publicacion-hasta" value="01041980">
+				<p class="help-block">En formato DDMMAAAA</p>
+			</div>
+			<div class="col-md-3">
+				<label for="valoracion-minima">Valoracion minima</label>
+				<select class="form-control" name="valoracion-minima">
+					<option value="1" selected>1</option>
+					<option value="2" selected>2</option>
+					<option value="3" selected>3</option>
+					<option value="4" selected>4</option>
+					<option value="5" selected>5</option>
+					<option value="6" selected>6</option>
+					<option value="7" selected>7</option>
+					<option value="8" selected>8</option>
+					<option value="9" selected>9</option>
+				</select>
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="col-md-12 text-right">
+			<button class="btn" type="reset">Limpiar filtros</button>
+			<button class="btn btn-primary" type="submit">Buscar</button>
+			</div>
+		</div>
+
+	</form>
+</div>
+
+{% endblock %}
+

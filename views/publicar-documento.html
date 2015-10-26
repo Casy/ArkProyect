@@ -1,0 +1,45 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div class="col-md-12 header-title">
+	<h1>Publicar documento</h1>
+</div>
+<form action="/publicar-documento/" method="post">
+	<div class="col-md-12 mb-10">
+		<input name="archivo" type="file" class="form-control">
+	</div>
+	<div class="col-md-6 mb-10">
+		<label for="nombre">Nombre</label>
+		<input type="input" name="sex" id="nombre" class="form-control">
+	</div>
+	<div class="col-md-6 mb-10">
+		<label for="referencia">Referencia</label>
+		<input type="input" name="sex" id="referencia" class="form-control">
+	</div>
+	<div class="col-md-6 mb-10">
+		<label for="categoria">Categoria</label>
+		<select name="tipo" id="categoria" class="form-control">
+			<option value="Tipo1">Tipo 1</option>
+			<option value="Tipo2">Tipo 2</option>
+			<option value="Tipo3">Tipo 3</option>
+		</select>
+	</div>
+	<div class="col-md-6 mb-10">
+		<label for="subcategoria">Sub categoria</label>
+		<select name="tipo" id="subcategoria" class="form-control">
+			<option value="Tipo1">Tipo 1</option>
+			<option value="Tipo2">Tipo 2</option>
+			<option value="Tipo3">Tipo 3</option>
+		</select>
+	</div>
+	<div class="col-md-6 mb-10">
+		<label for="palabrasclaves">Palabras claves</label>
+		<input type="input" name="sex" id="palabrasclaves" class="form-control">
+	</div>
+	<div class="col-md-6 col-md-offset-6 mb-10">
+		<button type="submit" class="btn btn-primary btn-block">Enviar</button>
+	</div>
+</form>
+
+{% endblock %}
+

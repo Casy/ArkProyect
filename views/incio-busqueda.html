@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div class="container mt-50">
+	<form action="/resultados-busqueda/" method="post">
+		<div class="col-md-2 col-md-offset-2">
+			<select class="form-control" name="tipo">
+				<option value="" disabled selected>Tipo</option>
+				<option value="colaboracion">Colaboracion</option>
+				<option value="referencia">Referencia</option>
+			</select>
+		</div>
+		<div class="col-md-4">
+			<input type="text" placeholder="Realice su búsqueda" name="busqueda" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<button type="submit" class="btn btn-primary btn-block">Buscar</button>
+		</div>
+		<div class="col-md-4 col-md-offset-4 text-right">
+			<a href="/busqueda-avanzada">Busqueda avanzada</a>
+		</div>
+	</form>
+</div>
+
+{% endblock %}
+
